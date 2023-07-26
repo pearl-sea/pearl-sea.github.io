@@ -1,0 +1,25 @@
+---
+layout: base
+---
+
+<h1 class="category-title">{{ page.category }}</h1>
+
+<ul class="post-list">
+  {% for post in site.categories[page.category] %}
+  <li>
+    <a href="{{ post.url }}">
+      <p>{{ post.title }}</p>
+      <span class="post-meta">
+        {%- assign date_format = "%Y-%m-%d" -%}
+        <time
+          class="dt-published"
+          datetime="{{ page.date | date_to_xmlschema }}"
+          itemprop="datePublished"
+        >
+          {{ post.date | date: date_format }}
+        </time>
+      </span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

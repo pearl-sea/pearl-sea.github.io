@@ -1,0 +1,14 @@
+---
+layout: base
+---
+
+<h1 class="category-title">카테고리</h1>
+<ul class="category">
+  {% for category in site.categories %}
+  <li>
+    <a href="/category/{{ category | first }}"
+      >{{ category | first }} ({{ category | last | size }})</a
+    >
+  </li>
+  {% endfor %}
+</ul>

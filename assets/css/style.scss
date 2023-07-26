@@ -1,0 +1,136 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+@import "syntax";
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("../font/PretendardVariable.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "D2 coding";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../font/D2Coding-ligature.woff") format("woff");
+}
+@font-face {
+  font-family: "D2 coding";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../font/D2CodingBold-ligature.woff2") format("x-woff2");
+}
+
+body {
+  font: 400 1rem/1.5 Pretendard;
+  a {
+    color: unset;
+
+    &:visited {
+      color: unset;
+    }
+  }
+
+  hr {
+    background: #e8e8e8;
+    height: 1px;
+    border: 0;
+  }
+
+  .breadcrumb {
+    margin: 0 0 0.625rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 0.3125rem;
+  }
+
+  .breadcrumb svg {
+    display: flex;
+    margin: -2px 0 0 0;
+  }
+
+  .site-title {
+    font-weight: 500;
+  }
+
+  .site-header {
+    border-top: none;
+    position: sticky;
+    top: 0;
+    line-height: 4.375rem;
+    background: #fff;
+  }
+
+  .wrapper {
+    max-width: calc(60rem - (30px * 2));
+  }
+
+  .page-content {
+    padding: 1.875rem 0 6.25rem;
+
+    .post-title {
+      font-size: 2rem;
+    }
+    .category-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .category {
+    li {
+      font-size: 1.125rem;
+    }
+  }
+
+  .post-list {
+    display: flex;
+    flex-flow: column;
+    gap: 0.625rem;
+    margin: 0 0 0 1.875rem;
+
+    li:not(:last-child) {
+      border-bottom: 1px solid #e8e8e8;
+    }
+    li {
+      margin: 0;
+      padding: 0 0 0.625rem;
+    }
+
+    a {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin: 0;
+    }
+  }
+
+  .post-content {
+    h3 {
+      font-size: 1.375rem;
+    }
+  }
+
+  .background {
+    width: 100%;
+    object-fit: cover;
+    height: 65vh;
+  }
+
+  .site-nav {
+    top: 0.9375rem;
+  }
+}
