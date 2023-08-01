@@ -5,23 +5,29 @@
   {%- seo -%}
   <link
     rel="preload"
-    href="{{site.baseurl}}assets/font/PretendardVariable.woff2"
+    href="{{site.baseurl}}/assets/font/PretendardVariable.woff2"
     as="font"
     crossorigin="anonymous"
   />
   <link
     rel="preload"
-    href="{{site.baseurl}}assets/font/D2Coding-ligature.woff"
+    href="{{site.baseurl}}/assets/font/D2Coding-ligature.woff"
     as="font"
     crossorigin="anonymous"
+    x
   />
   <link
     rel="preload"
-    href="{{site.baseurl}}assets/font/D2CodingBold-ligature.woff2"
+    href="{{site.baseurl}}/assets/font/D2CodingBold-ligature.woff"
     as="font"
     crossorigin="anonymous"
   />
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{{site.baseurl}}/assets/img/favicon.ico"
+  />
   {%- feed_meta -%} {%- if jekyll.environment == 'production' and
   site.google_analytics -%} {%- include google-analytics.html -%} {%- endif -%}
   {%- include custom-head.html -%}

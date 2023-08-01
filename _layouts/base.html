@@ -14,8 +14,9 @@
         {{ content }}
       </div>
     </main>
-    {% if page.url == site.baseurl %}
-      <img class="background" src="/assets/img/background.jpg" alt="">
+
+    {% if page.url == "/" %}
+      <img class="background" src="{{ site.baseurl }}/assets/img/background.jpg" alt="">
     {% endif %} 
 
     {%- include footer.html -%}

@@ -4,7 +4,7 @@ title: "useEffect"
 categories: ["react"]
 ---
 
-`useEffect`는 컴포넌트의 생명주기와 관련하여 사이드 이펙트를 수행하는 `Hook`이다.
+useEffect는 컴포넌트의 생명주기와 관련하여 사이드 이펙트를 수행하는 Hook이다.
 
 #### Life cycle
 

@@ -15,7 +15,7 @@ async, await은 Promise chaining의 가독성을 개선한 코드이다.
 
 함수 선언시 가장 앞에 붙이는 키워드이며 함수 안에 비동기적으로 실행할 부분이 있음을 명시한다.
 
-### await
+#### await
 
 - 비동기적으로 실행할 부분에 await을 붙인다.
 - await 키워드가 붙는 함수는 프로미스 객체를 리턴해야 한다.
@@ -23,7 +23,7 @@ async, await은 Promise chaining의 가독성을 개선한 코드이다.
 - await 키워드가 붙은 부분이 실행되면 Promise 객체가 fulfilled / rejected 상태가 될 때까지 async 함수를 정지시킨다.
 - await이 여러개 붙을 경우 await이 붙은 코드는 순서대로 실행된다.
 
-### Promise chaining 재작성하기
+#### Promise chaining 재작성하기
 
 ```jsx
 fetch("https://jsonplaceholder.typicode.com/users")
@@ -47,7 +47,7 @@ async function getUserName() {
 getUserName();
 ```
 
-### try, catch, finally 추가하기
+#### try, catch, finally 추가하기
 
 ```jsx
 async function getUserName() {

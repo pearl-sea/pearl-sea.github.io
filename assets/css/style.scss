@@ -11,22 +11,19 @@
   font-family: "Pretendard";
   font-weight: 45 920;
   font-style: normal;
-  font-display: swap;
   src: url("../font/PretendardVariable.woff2") format("woff2-variations");
 }
 @font-face {
   font-family: "D2 coding";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: url("../font/D2Coding-ligature.woff") format("woff");
 }
 @font-face {
   font-family: "D2 coding";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url("../font/D2CodingBold-ligature.woff2") format("x-woff2");
+  src: url("../font/D2CodingBold-ligature.woff") format("woff");
 }
 
 body {

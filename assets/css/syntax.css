@@ -1,7 +1,6 @@
 pre.highlight {
   margin: 0 0 1.875rem;
 }
-
 pre,
 code {
   font-size: 1rem;
@@ -50,7 +49,7 @@ code.highlighter-rouge {
 }
 .highlight .err {
   color: #ffffff;
-  background-color: #cc0000;
+  background-color: transparent;
 }
 .highlight .gr {
   color: #ffffff;
@@ -86,7 +85,6 @@ code.highlighter-rouge {
 }
 .highlight .kn,
 .highlight .kp,
-.highlight .kr,
 .highlight .gh,
 .highlight .gu {
   color: #ffffff;
@@ -146,6 +144,7 @@ code.highlighter-rouge {
 .highlight .w {
   color: #bbbbbb;
 }
+.highlight .kr,
 .highlight .nf,
 .highlight .fm {
   color: #4cd4a9;
