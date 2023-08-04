@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SHA-3으로 비밀번호 해싱해주세요
-categories: ["개발일기"]
+title: SHA-3으로 비밀번호 해싱
+categories: ["study"]
 ---
 
 #### 비밀번호는 단방향 암호화로 저장

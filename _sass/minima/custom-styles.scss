@@ -1,2 +1,295 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 45 920;
+  font-style: normal;
+  src: url("../font/PretendardVariable.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "D2 coding";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/D2Coding-ligature.woff") format("woff");
+}
+@font-face {
+  font-family: "D2 coding";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/D2CodingBold-ligature.woff") format("woff");
+}
+
+body {
+  a {
+    color: unset;
+
+    &:visited {
+      color: unset;
+    }
+  }
+
+  hr {
+    background: #e8e8e8;
+    height: 1px;
+    border: 0;
+  }
+
+  .breadcrumb {
+    margin: 0 0 0.625rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 0.3125rem;
+  }
+
+  .breadcrumb svg {
+    display: flex;
+    margin: -2px 0 0 0;
+  }
+
+  .site-title {
+    font-weight: 500;
+  }
+
+  .site-header {
+    border-top: none;
+    position: sticky;
+    top: 0;
+    line-height: 4.375rem;
+    background: #fff;
+  }
+
+  .wrapper {
+    max-width: calc(60rem - (30px * 2));
+  }
+
+  .page-content {
+    padding: 1.875rem 0 6.25rem;
+
+    .post-title {
+      font-size: 2rem;
+    }
+    .category-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .category {
+    li {
+      font-size: 1.125rem;
+    }
+  }
+
+  .post-list {
+    display: flex;
+    flex-flow: column;
+    gap: 0.625rem;
+    margin: 0 0 0 1.875rem;
+
+    li:not(:last-child) {
+      border-bottom: 1px solid #e8e8e8;
+    }
+    li {
+      margin: 0;
+      padding: 0 0 0.625rem;
+    }
+
+    a {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin: 0;
+    }
+  }
+
+  .post-content {
+    h3 {
+      font-size: 1.375rem;
+    }
+  }
+
+  .background {
+    width: 100%;
+    object-fit: cover;
+    height: 65vh;
+  }
+
+  .site-nav {
+    top: 0.9375rem;
+  }
+
+  pre.highlight {
+    margin: 0 0 1.875rem;
+  }
+  .highlight table td {
+    padding: 5px;
+  }
+  .highlight table pre {
+    margin: 0;
+  }
+  .highlighter-rouge .code {
+    color: #faf6e4;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+  }
+  pre.highlighter-rouge,
+  code.highlighter-rouge {
+    line-height: normal;
+    background: rgba(135, 131, 120, 0.15);
+    color: #eb5757;
+    border-radius: 3px;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+    margin: 0 0.1875rem 0 0;
+  }
+  .highlighter-rouge pre {
+    font-size: 1rem;
+    padding: 1rem 0.75rem;
+  }
+  .highlighter-rouge code {
+    font-size: 1rem;
+    background: transparent;
+  }
+
+  .code {
+    .c,
+    .ch,
+    .cd,
+    .cm,
+    .cpf,
+    .c1,
+    .cs {
+      color: #9c9c9c;
+      font-style: italic;
+    }
+    .cp {
+      color: #41ff5b;
+    }
+    .err {
+      color: #ffffff;
+      background-color: transparent;
+    }
+    .gr {
+      color: #ffffff;
+      background-color: #cc0000;
+    }
+    .k,
+    .kd,
+    .kv {
+      color: #ffd448;
+    }
+    .o,
+    .ow {
+      color: #41ff5b;
+    }
+    .p,
+    .pi {
+      color: #ffb641;
+    }
+    .gd {
+      color: #cc0000;
+    }
+    .gi {
+      color: #3fb34f;
+    }
+    .ge {
+      font-style: italic;
+    }
+
+    .gt,
+    .gl,
+    .kc {
+      color: #7b89ff;
+    }
+    .kn,
+    .kp,
+    .gh,
+    .gu {
+      color: #ffffff;
+    }
+
+    .kt,
+    .no,
+    .nc,
+    .nd,
+    .nn,
+    .bp,
+    .ne {
+      color: #faaf4c;
+    }
+
+    .nl,
+    .nt {
+      color: #f8a66c;
+    }
+    .m,
+    .mb,
+    .mf,
+    .mh,
+    .mi,
+    .il,
+    .mo,
+    .mx {
+      color: #ff6865;
+    }
+    .ld,
+    .ss {
+      color: #9f93e6;
+    }
+    .s,
+    .sb,
+    .dl,
+    .sd,
+    .s2,
+    .sh,
+    .sx,
+    .sr,
+    .s1 {
+      color: #fff0a6;
+    }
+    .sa {
+      color: #fff02a;
+    }
+    .se,
+    .sc,
+    .si {
+      color: #faaf4c;
+    }
+
+    .ni {
+      color: #999999;
+    }
+    .w {
+      color: #bbbbbb;
+    }
+    .kr,
+    .nf,
+    .fm {
+      color: #4cd4a9;
+      font-weight: normal;
+    }
+    .py {
+      color: #41ff5b;
+    }
+    .na {
+      color: #97f169;
+    }
+    .nv,
+    .vc,
+    .vg,
+    .vi,
+    .vm {
+      color: #41ff5b;
+    }
+
+    .nb {
+      color: #27bff2;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: application/x-www-form-urlencoded
-categories: ["개발일기"]
+categories: ["study"]
 ---
 
 #### 며칠전부터 로그인이 안되던 오류 발생
@@ -15,7 +15,7 @@ categories: ["개발일기"]
 
 key=value 쌍으로된 쿼리스트링과 유사한 문자열을 전송하는 형식이다.  
 헤더의 Content-Type이 `application/x-www-form-urlencoded`이면  
-form데이터를 보낼때 `username=myUsername&password=myPassword` 이런 형식으로 코딩해서 전송해야 한다고 한다.  
+form 데이터를 보낼때 username=myUsername&password=myPassword 이런 형식으로 코딩해서 전송해야 한다고 한다.  
 그래서 `stringify`를 사용하지 않고 `URLSearchParams`를 사용한다.
 
 ```jsx

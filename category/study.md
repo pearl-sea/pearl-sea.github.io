@@ -1,4 +1,4 @@
 ---
 layout: category
-category: 개발일기
+category: study
 ---
