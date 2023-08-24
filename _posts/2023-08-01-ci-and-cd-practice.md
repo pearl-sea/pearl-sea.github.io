@@ -72,6 +72,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Install Dependencies
+        run: npm install
+
       - name: Build
         run: npm run build
 
@@ -83,6 +86,6 @@ jobs:
         run: |
           aws s3 sync \
             --region ap-northeast-2 \
-            build s3://배포할 버킷에 따라 적절하게 변경 \
+            build s3://버킷 이름 \
             --delete
 ```
