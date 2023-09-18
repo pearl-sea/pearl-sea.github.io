@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 기술 발표 준비
-categories: ["stduy"]
+categories: ["study"]
 ---
 
 저는 프로젝트에서 기본 CRUD와 실시간 경매 기능, 이미지 업로드 기능을 담당했습니다.
