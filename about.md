@@ -6,8 +6,8 @@ permalink: /about/
 
 ### 박진주
 
-[https://github.com/pearl-sea](https://github.com/pearl-sea)  
-[sakanaplanet@gmail.com](mailto:sakanaplanet@gmail.com)
+**[GitHub](https://github.com/pearl-sea)**  
+sakanaplanet@gmail.com
 
 ---
 
