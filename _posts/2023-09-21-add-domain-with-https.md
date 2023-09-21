@@ -5,8 +5,7 @@ categories: ["study"]
 ---
 
 20일정도 팀원들과 열심히 제작한 프로젝트에 새로 구입한 도메인과 HTTPS를 적용해보았습니다.
-
-이 작업을 하려면 도메인 제공 업체를 제외하고 추가로 세개의 서비스를 사용해야합니다.
+이 작업을 하려면 추가로 세개의 서비스를 사용해야합니다.
 
 * **AWS Certificate Manager**  
   SSL/TLS 인증서를 관리하고 제공하는 서비스입니다.
@@ -41,16 +40,16 @@ S3 버킷리전은 신경쓰지 않아도 됩니다 인증서 요청 시에만 �
 #### 도메인 구입
 goDaddy라는 사이트에서 wonprice.shop을 구입했습니다.
 
-![구입한 도메인](image-1.png)
+![구입한 도메인](/assets/img/image-1.png)
 
 #### Route 53에 도메인 등록
 호스팅 영역 생성으로 이동합니다.
 
-![route53 대시보드](image-2.png)
+![route53 대시보드](/assets/img/image-2.png)
 
 구입한 도메인을 입력하고 호스팅 영역을 생성합니다.
 
-![호스팅 영역 생성](image-3.png)
+![호스팅 영역 생성](/assets/img/image-3.png)
 
 #### 도메인 구입한 업체에서 네임서버 변경
 
@@ -59,30 +58,30 @@ IP주소와 도메인주소를 연결하주는 역할을 하는 서버입니다.
 
 호스팅 영역을 생성하면 4개의 네임 서버가 생성됩니다.
 
-![네임서버](image-4.png)
+![네임서버](/assets/img/image-4.png)
 
 도메인을 구입한 호스팅서비스 업체로 이동해서  
 방금 전에 Route 53에서 발급받았던 네임서버로 변경해줍니다.
 
-![네임서버 변경](image-5.png)
+![네임서버 변경](/assets/img/image-5.png)
 
 #### 인증서 발급
 
 AWS Certificate Manager로 이동해서 퍼블릭 인증서 발급을 선택한 후 구입한 도메인 이름을 적습니다.
 
-![인증서 발급](image-6.png)
-![인증서 발급](image-7.png)
-![Alt text](image-8.png)
+![인증서 발급](/assets/img/image-6.png)
+![인증서 발급](/assets/img/image-7.png)
+![Alt text](/assets/img/image-8.png)
 
 #### Route 53에서 레코드 생성
 
 Route 53에서 레코드 생성을 클릭합니다.
 
-![레코드 생성](image-11.png)
+![레코드 생성](/assets/img/image-11.png)
 
 트래픽 라우팅 대상을 다음과 같이 설정합니다.
 
-![레코드 생성 설정](image-10.png)
+![레코드 생성 설정](/assets/img/image-10.png)
 
 여기까지 하면 https없이 도메인 연결이 완료됩니다.
 
@@ -91,18 +90,18 @@ Route 53에서 레코드 생성을 클릭합니다.
 Cloudfront로 이동해서 배포 생성을 클릭하고    
 원본 도메인과 인증서, 구입한 도메인, HTTPS 설정 등을 입력합니다.
 
-![배포 생성 설정](image-12.png)
-![배포 생성 설정](image-13.png)
-![배포 생성 설정](image-14.png)
+![배포 생성 설정](/assets/img/image-12.png)
+![배포 생성 설정](/assets/img/image-13.png)
+![배포 생성 설정](/assets/img/image-14.png)
 
 배포에 성공했다면 배포 도메인 이름을 복사한 뒤
 
-![배포 도메인 이름 복사](image-15.png)
+![배포 도메인 이름 복사](/assets/img/image-15.png)
 
 다시 Route 53으로 돌아와서 처음에 설정한 트래픽 라우팅 대상을 CloudFront 배포로 변경해 줍니다.
 
-![트래픽 라우팅 대상 변경](image-16.png)
+![트래픽 라우팅 대상 변경](/assets/img/image-16.png)
 
 적용이 완료되었습니다.
 
-![HTTPS 적용 완료](image-17.png)
+![HTTPS 적용 완료](/assets/img/image-17.png)
