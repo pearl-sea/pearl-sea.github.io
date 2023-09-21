@@ -19,6 +19,7 @@ categories: ["study"]
 브라우저 포커싱을 벗어났다 다시 돌아왔을때 데이터가 낡았다고 판단하고 리페칭하는것이 리액트 쿼리의 기본 설정입니다. 그러나 저는 포커싱 여부와 상관없이 url의 변화가 있을때만 리페칭을 하고 싶었습니다.
 
 ```jsx
+
   const location = useLocation();
   const itemNumber = location.pathname.split("/");
   const queryClient = useQueryClient();
@@ -44,6 +45,7 @@ categories: ["study"]
   useEffect(() => {
     refetch();
   }, [location.pathname, location.search, currentPage]);
+
 ```
 
 쿼리 키를 다음과 같이 작성했을때 한번이라도 접근했던 경로는 다시 접근하더라도 리페칭 되지 않았습니다.
@@ -69,9 +71,11 @@ categories: ["study"]
 쿼리 키를 아래처럼 작성했을 때 의도한대로 리페칭이 되었습니다.
 
 ```jsx
+
   [
     "productList", location
   ],
+
 ```
 
 ### 다시 작성한 코드
@@ -80,41 +84,43 @@ categories: ["study"]
 useEffect로 작성할 수 있는 코드는 `onSuccess` 안에 작성할 수 있기 때문에 useEffect를 지웠습니다. `queryClient.invalidateQueries`는 데이터에 변화가 있을때 쿼리키의 유효성을 제거하기 위해 사용되어 데이터 조회 목적과 맞지 않기 때문에 적지 않았습니다.
 
 ```jsx
-const location = useLocation();
-const searchParams = new URLSearchParams(location.search);
-const categoryId = getCategoryId(location.pathname);
-const path = getAPIPath(categoryId);
-const page = Number(searchParams.get("page")) - 1;
-const type = searchParams.get("type");
-const keyword = searchParams.get("keyword");
 
-const { isLoading, error, data } = useQuery<Data>(
-  [
-    "productList", location
-  ],
-  getData,
-  {
-    onSuccess: (data) => {
-      if (data.totalPages !== undefined) {
-        setTotalPages(data.totalPages);
-      }
-      setCurrentPage(page);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const categoryId = getCategoryId(location.pathname);
+  const path = getAPIPath(categoryId);
+  const page = Number(searchParams.get("page")) - 1;
+  const type = searchParams.get("type");
+  const keyword = searchParams.get("keyword");
+
+  const { isLoading, error, data } = useQuery<Data>(
+    [
+      "productList", location
+    ],
+    getData,
+    {
+      onSuccess: (data) => {
+        if (data.totalPages !== undefined) {
+          setTotalPages(data.totalPages);
+        }
+        setCurrentPage(page);
+      },
+      staleTime: Infinity,
     },
-    staleTime: Infinity,
-  },
-);
+  );
+
 ```
 
 리액트쿼리에서 queryFn의 역할을 하는 getData함수입니다. 검색결과, 필터링결과, 카테고리 조회 api의 pathname이 전부 달라서 복잡한 형태가 되었습니다. pathname으로 구분하지 않고 쿼리스트링으로 구분했다면 더 간단하게 작성할 수 있었을 것 같아요.
 
 ```jsx
 
-const getData = async () => {
+  const getData = async () => {
     const params = { page: page, size: ITEMS_PER_VIEW };
     if (type) {
-      const response = await axios.get(`/products/available`, {
-        params: { ...params, type: type },
-      });
+        const response = await axios.get(`/products/available`, {
+          params: { ...params, type: type },
+        });
 
       return response.data;
     }
