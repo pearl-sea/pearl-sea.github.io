@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Type Alias
-categories: ["typescript"]
+categories: ["TypeScript"]
 ---
 
 타입 별칭(Type Alias)는 타입에 이름을 부여하는 타입스크립트 문법이다.  

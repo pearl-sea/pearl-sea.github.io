@@ -1,7 +1,7 @@
 ---
 layout: post
 title: lint-staged와 husky를 이용한 prettier 자동화
-categories: ["study"]
+categories: ["Study"]
 ---
 
 코드 포맷팅을 적용하지 않은 커밋을 원격 저장소에 푸시하는 실수를 방지하기 위해 프로젝트에 lint-staged와 husky를 적용해 보았다.

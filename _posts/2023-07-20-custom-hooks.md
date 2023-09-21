@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Custom Hooks"
-categories: ["react"]
+categories: ["React"]
 ---
 
 #### React에서의 Hook

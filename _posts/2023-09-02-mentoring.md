@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 프로젝트 멘토링 (2주차)
-categories: ["study"]
+title: 프로젝트 멘토링
+categories: ["Study"]
 ---
 
 #### 내가 했던 질문  
@@ -22,9 +22,9 @@ categories: ["study"]
 
 
 #### 멘토님의 조언  
-* **vscode 디버깅과 react 개발자도구 프로파일러를 적극적으로 사용해보자.** 
+* **vscode 디버깅과 react 개발자도구 프로파일러를 적극적으로 사용해보자.**  
 
-* **개발 편의성 면에서 [locatorjs](https://www.locatorjs.com/) 도 추천**
+* **개발 편의성 면에서 [locatorjs](https://www.locatorjs.com/) 도 추천**  
 
 * **폴더명을 바꿨을때 커밋에 반영되지 않아 에러가 생기는 문제**  
   -> 폴더안에 든 파일 명을 바꿔서 커밋해주면 파일명도 변경이 된다.  

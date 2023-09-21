@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "async, await"
-categories: ["javascript"]
+categories: ["JavaScript"]
 ---
 
 async, await은 Promise chaining의 가독성을 개선한 코드이다.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SSH Key 생성하고 Github에 등록하기
-categories: ["study"]
+categories: ["Study"]
 ---
 
 #### SSH 인증

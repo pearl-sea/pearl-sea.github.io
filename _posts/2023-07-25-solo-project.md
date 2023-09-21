@@ -2,7 +2,7 @@
 ---
 layout: post
 title: "무한스크롤 / 북마크 / 토스트 구현하기"
-categories: ["study"]
+categories: ["Study"]
 ---
 
 리액트 솔로프로젝트에서 구현한 주요 기능들을 정리하였다.

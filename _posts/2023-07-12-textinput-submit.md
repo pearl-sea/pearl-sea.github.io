@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "텍스트타입 인풋이 하나만 존재하면 submit되는 현상"
-categories: ["html"]
+categories: ["HTML"]
 ---
 
 ```html

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interface
-categories: ["typescript"]
+categories: ["TypeScript"]
 ---
 
 타입스크립트에서 interface는 객체의 타입을 지정할때 사용되는 문법이다.

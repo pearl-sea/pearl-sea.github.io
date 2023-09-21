@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "useEffect"
-categories: ["react"]
+categories: ["React"]
 ---
 
 useEffect는 컴포넌트의 생명주기와 관련하여 사이드 이펙트를 수행하는 Hook이다.

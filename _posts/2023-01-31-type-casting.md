@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "형변환"
-categories: ["javascript"]
+categories: ["JavaScript"]
 ---
 
 String, Number, Boolean 함수를 사용하면 데이터 타입을 바꿀 수 있다.

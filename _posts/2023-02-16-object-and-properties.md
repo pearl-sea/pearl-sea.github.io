@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 객체와 프로퍼티
-categories: ["javascript"]
+categories: ["JavaScript"]
 ---
 
 객체는 key와 value로 이루어진 property의 집합이다.  

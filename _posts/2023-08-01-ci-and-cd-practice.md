@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CI/CD와 Github Actions
-categories: ["study"]
+categories: ["Study"]
 ---
 
 CI/CD는 애플리케이션 개발 단계를 **자동화**하여 애플리케이션을 더욱 짧은 주기로 고객에게 제공하는 방법이다.

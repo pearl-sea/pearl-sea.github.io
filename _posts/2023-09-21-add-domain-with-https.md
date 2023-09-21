@@ -1,11 +1,11 @@
 ---
 layout: post
 title: 프로젝트에 도메인과 HTTPS 적용
-categories: ["study"]
+categories: ["Study"]
 ---
 
-20일정도 팀원들과 열심히 제작한 프로젝트에 새로 구입한 도메인과 HTTPS를 적용해보았습니다.
-이 작업을 하려면 추가로 세개의 서비스를 사용해야합니다.
+20일정도 팀원들과 열심히 제작한 프로젝트에 새로 구입한 도메인과 HTTPS를 적용해보았습니다.  
+이제부터는 세개의 서비스를 추가로 사용해야합니다.
 
 * **AWS Certificate Manager**  
   SSL/TLS 인증서를 관리하고 제공하는 서비스입니다.
@@ -54,7 +54,7 @@ goDaddy라는 사이트에서 wonprice.shop을 구입했습니다.
 #### 도메인 구입한 업체에서 네임서버 변경
 
 * **네임서버**  
-IP주소와 도메인주소를 연결하주는 역할을 하는 서버입니다.
+IP주소와 도메인주소를 연결해주는 역할을 하는 서버입니다.
 
 호스팅 영역을 생성하면 4개의 네임 서버가 생성됩니다.
 
@@ -69,8 +69,8 @@ IP주소와 도메인주소를 연결하주는 역할을 하는 서버입니다.
 
 AWS Certificate Manager로 이동해서 퍼블릭 인증서 발급을 선택한 후 구입한 도메인 이름을 적습니다.
 
-![인증서 발급](/assets/img/image-6.png)  
-![인증서 발급](/assets/img/image-7.png)  
+![인증서 발급](/assets/img/image-6.png)<br>  
+![인증서 발급](/assets/img/image-7.png)<br>  
 ![인증서 발급 완료](/assets/img/image-8.png)  
 
 #### Route 53에서 레코드 생성
@@ -90,8 +90,8 @@ Route 53에서 레코드 생성을 클릭합니다.
 Cloudfront로 이동해서 배포 생성을 클릭하고    
 원본 도메인과 인증서, 구입한 도메인, HTTPS 설정 등을 입력합니다.
 
-![배포 생성 설정](/assets/img/image-12.png)  
-![배포 생성 설정](/assets/img/image-13.png)  
+![배포 생성 설정](/assets/img/image-12.png)<br>  
+![배포 생성 설정](/assets/img/image-13.png)<br> 
 ![배포 생성 설정](/assets/img/image-14.png)  
 
 배포에 성공했다면 배포 도메인 이름을 복사한 뒤

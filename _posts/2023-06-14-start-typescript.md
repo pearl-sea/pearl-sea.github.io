@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 타입스크립트 입문
-categories: ["typescript"]
+categories: ["TypeScript"]
 ---
 
 타입스크립트는 선택이 아닌 필수라고 하는 요즘  

@@ -6,7 +6,7 @@ layout: base
 <ul class="category">
   {% for category in site.categories %}
   <li>
-    <a href="/category/{{ category | first }}"
+    <a href="/category/{{ category | first | downcase}}"
       >{{ category | first }} ({{ category | last | size }})</a
     >
   </li>

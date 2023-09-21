@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "셀프 클로징 태그"
-categories: ["html"]
+categories: ["HTML"]
 ---
 
 `input`, `img`, `br`태그 같은 경우 닫는 태그를 같이 작성하면 어색하다.

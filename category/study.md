@@ -1,4 +1,4 @@
 ---
 layout: category
-category: study
+category: Study
 ---
